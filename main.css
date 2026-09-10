@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+==================================================
+   BLESS DENTAL CLINIC - CSS
+   Arabic RTL | Medical Blue & White Theme
+==================================================
+*/
+
+/* --- Custom Variables & Base Styles --- */
+:root {
+  --primary-teal: #0d9488;
+  --primary-dark: #0f766e;
+  --primary-light: #ccfbf1;
+  --accent-gold: #f59e0b;
+  --text-main: #1e293b;
+  --bg-light: #f8fafc;
+}
+
+body {
+  font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* --- Header & Navigation --- */
+.dental-nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Card Animations --- */
+.dental-service-card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dental-card-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.dental-service-card:hover {
+  transform: translateY(-5px) !important;
+}
+
+/* --- Custom Utility Classes --- */
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.bg-blur-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
