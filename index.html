@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bless Dental Clinic - عيادة بليس لطب وتجميل الأسنان</title>
+    <!-- خط Tajawal الأنيق من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(2, 132, 199, 0.1);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: #e0f2fe;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 20px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-btn {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Form Container */
+        .booking-container {
+            background: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-tooth"></i> Bless Dental
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#booking">احجز الآن</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>عيادة بليس لطب وتجميل الأسنان</h1>
+        <p>نصنع لابتسامتك أجمل إطلالة بأحدث تقنيات طب الأسنان في ميت غمر.</p>
+        <div class="btn-group">
+            <a href="#booking" class="btn btn-primary"><i class="fas fa-calendar-check"></i> احجز موعدك</a>
+            <a href="https://wa.me/201108075117" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">التخصصات والخدمات</h2>
+        <div class="services-grid">
+            
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-sparkles"></i></div>
+                <h3>تجميل وتبييض الأسنان</h3>
+                <p>تبييض الأسنان بالليزر وفينير ابتسامة هوليود بأعلى جودة.</p>
+                <a href="#booking" class="card-btn">حجز استشارة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-tooth"></i></div>
+                <h3>حشو وعلاج العصب</h3>
+                <p>علاج الجذور والحشوات التجميلية بدون ألم وبأحدث الأجهزة.</p>
+                <a href="#booking" class="card-btn">حجز استشارة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-teeth"></i></div>
+                <h3>تركيبات الأسنان</h3>
+                <p>تركيبات الزيركون والبورسلين الثابتة والمتحركة للفكين.</p>
+                <a href="#booking" class="card-btn">حجز استشارة <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="services-section">
+        <div class="booking-container">
+            <h2 class="section-title" style="margin-bottom: 20px;">حجز موعد كشف</h2>
+            <form action="https://wa.me/201108075117" method="get" target="_blank">
+                
+                <div class="form-group">
+                    <label>الاسم بالكامل</label>
+                    <input type="text" class="form-control" placeholder="أدخل اسمك الكريم" required>
+                </div>
+
+                <div class="form-group">
+                    <label>رقم الهاتف</label>
+                    <input type="tel" class="form-control" placeholder="01xxxxxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label>اختر التخصص / الخدمة</label>
+                    <select class="form-control" required>
+                        <option value="" disabled selected>اختر الخدمة</option>
+                        <option>تجميل وتبييض الأسنان</option>
+                        <option>حشو وعلاج الجذور</option>
+                        <option>تركيبات الزيركون</option>
+                        <option>كشف واستشارة عامة</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">تأكيد الحجز عبر الواتساب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/201108075117" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; Bless Dental Clinic</p>
+    </footer>
+
+</body>
+</html>
