@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bless Dental Clinic - عيادة بليس لأسنان أجمل</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Bless <span>Dental</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#about">عن العيادة</a></li>
+                    <li><a href="#contact">حجز موعد</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>ابتسامتك المشرقة تبدأ من عيادة بليس</h1>
+            <p>نقدم أحدث خدمات طب وتجميل الأسنان بأعلى معايير الجودة والراحة في ميت غمر.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">احجز موعدك الآن</a>
+                <a href="https://wa.me/201288133143" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المميزة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-teeth-open icon"></i>
+                    <h3>تبييض وتنظيف الأسنان</h3>
+                    <p>إزالة التصبغات والترسبات لابتسامة ناصعة ومشرقة.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tooth icon"></i>
+                    <h3>حشو وعلاج الجذور</h3>
+                    <p>علاج آمن وبدون ألم مع أحدث أجهزة حشو العصب.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-smile icon"></i>
+                    <h3>تركيبات وتجميل الأسنان</h3>
+                    <p>تركيبات فينير وهوليود سمايل مخصصة لجمال ابتسامتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="contact" class="booking-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>حجز موعد كشف</h2>
+                <p>يرجى ملء البيانات التالية وسنقوم بالتواصل معك لتأكيد الموعد:</p>
+                
+                <form action="https://wa.me/201288133143" method="get" target="_blank" class="appointment-form">
+                    <div class="form-group">
+                        <label for="name">الاسم بالكامل</label>
+                        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكريم" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">الخدمة المطلوبة</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>اختر الخدمة</option>
+                            <option value="كشف عام">كشف عام وتدقيق</option>
+                            <option value="تنظيف وتبييض">تنظيف وتبييض الأسنان</option>
+                            <option value="علاج عصب">حشو وعلاج جذور</option>
+                            <option value="تركيبات وتجميل">تركيبات وتجميل الأسنان</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">التاريخ المفضل</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">ارسال طلب الحجز</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201288133143" class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة &copy; Bless Dental Clinic - ميت غمر</p>
+        </div>
+    </footer>
+
+</body>
+</html>
